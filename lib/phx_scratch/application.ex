@@ -12,6 +12,7 @@ defmodule PhxScratch.Application do
       supervisor(PhxScratch.Repo, []),
       # Start the endpoint when the application starts
       supervisor(PhxScratch.Web.Endpoint, []),
+      worker(PhxScratch.Data.Cities, []),
       # Start your own worker by calling: PhxScratch.Worker.start_link(arg1, arg2, arg3)
       # worker(PhxScratch.Worker, [arg1, arg2, arg3]),
     ]
